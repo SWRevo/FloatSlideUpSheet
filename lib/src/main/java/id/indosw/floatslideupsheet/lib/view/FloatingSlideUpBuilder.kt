@@ -59,12 +59,13 @@ class FloatingSlideUpBuilder(private val context: Context, private val viewGroup
     }
     private val bottomSheetBehaviour by lazy {
         BottomSheetBehavior.from(panelExpandable).apply {
-            addBottomSheetCallback(bottomSheetBehaviorCallback)
-            halfExpandedRatio = 0.999999f
+            //addBottomSheetCallback(bottomSheetBehaviorCallback)
+            setBottomSheetCallback(bottomSheetBehaviorCallback)
+            //halfExpandedRatio = 0.999999f
             floatingMenuView?.post {
                 peekHeight = floatingMenuView?.height?.plus(12.toDp(context)).orZero()
             }
-            isFitToContents = false
+            isFitToContents = true
         }
     }
 
