@@ -93,8 +93,6 @@ public class FloatingSlideUpActivity extends AppCompatActivity {
 ```
 
 ## License
-
-    
 This project is sourced and wholly thought of https://github.com/rizmaulana/floating-slideup-sheet/blob/master/README.MD
 I am IndoSW is a project modifier to support JAVA and Sketchware users
 
