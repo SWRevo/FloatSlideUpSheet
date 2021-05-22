@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.SWRevo:FloatSlideUpSheet:1.1.0'
+    implementation 'com.github.SWRevo:FloatSlideUpSheet:1.2.0'
 }
 ```
 
