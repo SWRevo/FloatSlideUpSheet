@@ -16,7 +16,6 @@ import id.indosw.floatslideupsheet.lib.helper.setColorAlpha
 import id.indosw.floatslideupsheet.lib.helper.toDp
 import id.indosw.floatslideupsheet.lib.helper.toPx
 
-@Suppress("DEPRECATION")
 class FloatingSlideUpBuilder(private val context: Context, private val viewGroup: ViewGroup) {
     private var floatingMenuView: View? = null
     private var panelView: View? = null
@@ -61,7 +60,7 @@ class FloatingSlideUpBuilder(private val context: Context, private val viewGroup
     private val bottomSheetBehaviour by lazy {
         BottomSheetBehavior.from(panelExpandable).apply {
             setBottomSheetCallback(bottomSheetBehaviorCallback)
-            halfExpandedRatio = 0.999999f
+            //halfExpandedRatio = 0.999999f
             floatingMenuView?.post {
                 peekHeight = floatingMenuView?.height?.plus(12.toDp(context)).orZero()
             }
@@ -161,7 +160,7 @@ class FloatingSlideUpBuilder(private val context: Context, private val viewGroup
     private fun setMenuBackground() {
         floatingMenuView?.setBackgroundDrawable(backgroundRoundedDrawable)
         backgroundRoundedDrawable.setColor(context.resources.getColor(menuBackgroundColor))
-        backgroundRoundedDrawable.cornerRadius = menuRadius
+        backgroundRoundedDrawable.cornerRadius = menuRadius.toFloat()
         backgroundRoundedDrawable.setStroke(4, Color.parseColor("#10000000"))
 
     }
@@ -225,7 +224,7 @@ class FloatingSlideUpBuilder(private val context: Context, private val viewGroup
 
     }
 
-    private fun collapseBottomSheet() {
+    fun collapseBottomSheet() {
         bottomSheetBehaviour.state = BottomSheetBehavior.STATE_COLLAPSED
     }
 
