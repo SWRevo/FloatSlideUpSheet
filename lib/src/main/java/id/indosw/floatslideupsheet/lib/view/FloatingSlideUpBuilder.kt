@@ -59,8 +59,8 @@ class FloatingSlideUpBuilder(private val context: Context, private val viewGroup
     }
     private val bottomSheetBehaviour by lazy {
         BottomSheetBehavior.from(panelExpandable).apply {
-            setBottomSheetCallback(bottomSheetBehaviorCallback)
-            //halfExpandedRatio = 0.999999f
+            addBottomSheetCallback(bottomSheetBehaviorCallback)
+            halfExpandedRatio = 0.999999f
             floatingMenuView?.post {
                 peekHeight = floatingMenuView?.height?.plus(12.toDp(context)).orZero()
             }
@@ -157,10 +157,11 @@ class FloatingSlideUpBuilder(private val context: Context, private val viewGroup
         }
     }
 
+    @Suppress("DEPRECATION")
     private fun setMenuBackground() {
         floatingMenuView?.setBackgroundDrawable(backgroundRoundedDrawable)
         backgroundRoundedDrawable.setColor(context.resources.getColor(menuBackgroundColor))
-        backgroundRoundedDrawable.cornerRadius = menuRadius.toFloat()
+        backgroundRoundedDrawable.cornerRadius = menuRadius
         backgroundRoundedDrawable.setStroke(4, Color.parseColor("#10000000"))
 
     }
@@ -224,10 +225,11 @@ class FloatingSlideUpBuilder(private val context: Context, private val viewGroup
 
     }
 
-    fun collapseBottomSheet() {
+    private fun collapseBottomSheet() {
         bottomSheetBehaviour.state = BottomSheetBehavior.STATE_COLLAPSED
     }
 
+    @Suppress("unused")
     fun expandBottomSheet() {
         bottomSheetBehaviour.state = BottomSheetBehavior.STATE_EXPANDED
     }
