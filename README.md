@@ -14,11 +14,11 @@ dependencies {
 }
 ```
 ## Implementation in Sketchware
-Version 1.3.0 uses material component version 1.0.0 and appcompat 1.0.0 for support in Sketchware
+Version 1.5.0 uses material component version 1.0.0 and appcompat 1.0.0 for support in Sketchware
 Add the following to your Sketchware `local_library` download use:
 ```
 dependencies {
-    implementation 'com.github.SWRevo:FloatSlideUpSheet:1.3.0'
+    implementation 'com.github.SWRevo:FloatSlideUpSheet:1.5.0'
 }
 ```
 
