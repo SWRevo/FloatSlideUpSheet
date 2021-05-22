@@ -1,8 +1,8 @@
 # FloatSlideUpSheet
 [![](https://jitpack.io/v/SWRevo/FloatSlideUpSheet.svg)](https://jitpack.io/#SWRevo/FloatSlideUpSheet)
 
+## Implementation in Android Studio
 ## Gradle
-
 Add the following to your `build.gradle` to use:
 ```
 repositories {
@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.SWRevo:FloatSlideUpSheet:1.2.0'
+    implementation 'com.github.SWRevo:FloatSlideUpSheet:1.4.0'
 }
 ```
 ## Implementation in Sketchware
